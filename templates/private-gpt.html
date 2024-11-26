@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saarthi</title>
+  <link href="static/css/privategpt.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <img src="static/img/Saarthi_blue.png" alt="Logo" class="logo">
+
+  </header>
+  <video autoplay muted loop id="video-background">
+    <source src="static/img/guacamole91.mp4" type="video/mp4">Your browser does not support HTML5 video.
+  </video>
+  <div class="content">
+    <div class="left-column">
+      <div class="box mode-box">
+        <div class="box-header">Mode</div>
+        <div class="mode">
+          <label><input type="radio" name="mode" value="query" checked> Query Files</label>
+          <!-- <label><input type="radio" name="mode" value="search"> Search Files</label> -->
+          <label><input type="radio" name="mode" value="chat"> Chat (no context from files)</label>
+        </div>
+      </div>
+      <div class="box upload-box">
+        <div class="box-header">Upload File</div>
+        <div class="upload">
+          <input type="file" id="fileInput">
+        </div>
+      </div>
+      <div class="box ingested-files-box">
+        <div class="box-header">Reference Repositories</div>
+        <div class="file-list" id="fileList">
+          <!-- File names will be dynamically added here -->
+        </div>
+        <div class="file-actions">
+          <button id="deleteSelectedFileBtn" disabled>Delete Selected File</button>
+          <!-- <button id="deleteAllFilesBtn">Delete All Files</button> -->
+        </div>
+      </div>
+
+    </div>
+    <div class="right-column">
+      <div class="chat">
+        <div class="output" id="output">
+          <!-- Chat output will be displayed here -->
+        </div>
+        <div class="message">
+          <input type="text" id="messageInput" placeholder="Type a message...">
+          <button id="submit">Send</button>
+          <button id="micButton">
+            <img id="micIcon" src="static/img/mic.png" alt="Mic" class="mic-icon">
+          </button>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="retryButton">Retry</button>
+        <button id="undoButton">Undo</button>
+        <button id="clearButton">Clear</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="static/js/privategpt.js"></script>
+</body>
+
+</html>

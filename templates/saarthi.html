@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RailTel Saarthi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="static/css/popup_mygpt.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <!-- <header>
+    <img src="static/img/railtel-logo22.png" alt="Logo" class="logo">
+    <h2>RailTel Saarthi</h2>
+  </header>
+
+  <div class="about-section">
+    <h2>About RailTel Saarthi</h2>
+    <ul>
+      <li><strong>LLM:</strong> LLamacpp</li>
+      <li><strong>Model:</strong> Meta-Llama-3.1_8B-Instruct-Q8_K_M.gguf</li>
+      <li><strong>Database:</strong> vector-stores-qdrant</li>
+      <li><strong>ML & NLP Platform:</strong> Hugging Face</li>
+      <li><strong>UI:</strong> Gradio UI</li>
+      <li><strong>Front-End:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>Back-End:</strong> Python 3.11 </li>
+      <li><strong>System configuration:</strong> 11th Gen Intel(R) Core(TM) i3-1125G4 @ 2.00GHz 2.00 GHz</li>
+      <li><strong>Server configuration:</strong> Intel 3x XXV710DA2 cards, 6ports 25Gbe per system.</li>
+
+    </ul>
+  </div> -->
+
+
+  <!-- Embed the RailTel website in an iframe -->
+  <iframe src="https://taskmanager.rcil.gov.in/home" title="RailTel Website"></iframe>
+
+
+  <div id="chatbotIcon" class="chatbot-icon">
+    <img src="static/img/chat-bot-icon.png" alt="Chat Icon">
+  </div>
+
+  <div id="chatbotPopup" class="chatbot-popup">
+    <div class="popup-header">
+      <img src="static/img/Saarthi_blue.png" alt="Logo" class="popup-logo">
+      <!-- <h2>RailTel Saarthi</h2> -->
+    </div>
+
+    <div class="button-row">
+      <button class="toggle-button" onclick="toggleMode()">Select Mode</button>
+      <!-- <button class="toggle-button" onclick="toggleUpload()">Upload File</button> -->
+      <button class="toggle-button" onclick="toggleFiles()">Ingested Files</button>
+    </div>
+
+    <div id="modeSection" class="hidden">
+      <div class="box mode-box">
+        <div class="mode">
+          <label><input type="radio" name="mode" value="query" checked> Query Files</label>
+          <label><input type="radio" name="mode" value="chat"> Chat (no context from files)</label>
+        </div>
+      </div>
+    </div>
+
+    <div id="uploadSection" class="hidden">
+      <div class="box upload-box">
+        <input type="file" id="fileInput">
+      </div>
+    </div>
+
+    <div id="fileList" class="file-list hidden">
+      <div class="box">
+      </div>
+    </div>
+
+    <div class="chat">
+      <div class="output" id="output">
+        <!-- Chat output will be displayed here -->
+      </div>
+      <div class="message">
+        <!-- <img id="micIcon" src="static/img/mic.png" alt="Microphone" class="mic-icon"> -->
+        <input type="text" id="messageInput" placeholder="Type a message...">
+        <button id="submit">Send</button>
+        <button id="micButton">
+          <img id="micIcon" src="static/img/mic.png" alt="Mic" class="mic-icon">
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="static/js/privategpt.js"></script>
+
+</body>
+
+</html>
